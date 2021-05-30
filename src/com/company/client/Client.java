@@ -7,9 +7,11 @@ public class Client {
 
     private DataOutputStream outputStream;
     private BufferedReader bufferedReader; //will used in the future
+    public static int c = 0;
 
 
     public void start() throws IOException {
+
         System.out.println("Client is running....");
         Socket socket = new Socket("localhost" , 6000);
         this.outputStream = new DataOutputStream(socket.getOutputStream());

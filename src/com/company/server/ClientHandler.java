@@ -30,6 +30,7 @@ public class ClientHandler implements Runnable {
                 System.out.println("client says:" + inputData);
 
                 if (inputData.equals("exit")){
+                    outputStream.writeBytes( "See you soon ....\n");
                     break;
                 }
 

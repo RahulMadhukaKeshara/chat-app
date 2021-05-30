@@ -7,8 +7,9 @@ public class ChatClient {
 
     public static void main(String[] args) throws IOException {
 
-        Client client = new Client();
-        client.start();
+
+            Client client = new Client();
+            client.start();
 
         //what if you can capture user input using the scanner class???
         /*client.sendMessage("Hello from the client");
@@ -17,19 +18,21 @@ public class ChatClient {
         client.sendMessage("Thank You");
         client.sendMessage("exit");*/
 
-        Scanner in = new Scanner(System.in);
+            Scanner in = new Scanner(System.in);
 
-        String msg = "";
-        while (!msg.equals("exit") ){
-            msg = in.nextLine();
-            client.sendMessage(msg);
+            String msg = "";
+            while (!msg.equals("exit") ){
+                msg = in.nextLine();
+                client.sendMessage(msg);
+            }
+
+
+            System.out.println("Client finished the execution...");
         }
 
-
-        System.out.println("Client finished the execution...");
 
 
 
     }
 
-}
+
